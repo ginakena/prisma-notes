@@ -69,7 +69,7 @@ This model defines a table named User with three columns : id, name, email.<br>
 
 ### 4. Migrations
 Migrations are used to modify your database schema. They are a way to track changes to your database schema over time. 
-Track your database changes by running the following command<br> `npx prisma migrate dev --name init`<br>
+Track your database changes by running the following command<br> `npx prisma migrate dev --name ""`<br>
 This will create a new migration and apply it to your database.<br>
 View your database in UI by running <br> `npx prisma studio`
 
@@ -85,27 +85,27 @@ const user = new PrismaClient();
 #### Create
 ```
 const user = await user.create({
-  data: { name: "Alice", email: "alice@example.com" },
+  data: { name: "Alice", email: "regina@example.com" },
 });
 ```
 #### Read
 ```
 // Find unique
-const user = await prisma.user.findUnique({ where: { email: "alice@example.com" } });
+const user = await prisma.user.findUnique({ where: { email: "regina@example.com" } });
 
 // Find many 
-const users = await prisma.user.findMany({ where: { name: { contains: "Ali" } } });
+const users = await prisma.user.findMany({ where: { name: { contains: "" } } });
 ```
 #### Update
 ```
 const updatedUser = await prisma.user.update({
-  where: { email: "alice@example.com" },
-  data: { name: "Alicia" },
+  where: { email: "regina@example.com" },
+  data: { name: "Makena" },
 });
 ```
 ### Delete
 ```
-await prisma.user.delete({ where: { email: "alice@example.com" } });
+await prisma.user.delete({ where: { email: "regina@example.com" } });
 ```
 
 
