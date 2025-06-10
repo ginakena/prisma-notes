@@ -85,7 +85,7 @@ const user = new PrismaClient();
 #### Create
 ```
 const user = await user.create({
-  data: { name: "Alice", email: "regina@example.com" },
+  data: { name: "Regina", email: "regina@example.com" },
 });
 ```
 #### Read
